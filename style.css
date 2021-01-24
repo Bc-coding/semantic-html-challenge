@@ -1,0 +1,121 @@
+/* CSS files add styling rules to your content */
+
+:root {
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+
+  --ff-rock-salt: "Rock Salt", cursive;
+  --ff-roboto: "Roboto", sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: var(--ff-roboto);
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+th,
+tfoot,
+caption {
+  font-family: var(--ff-rock-salt);
+}
+
+caption {
+  caption-side: bottom;
+  text-align: right;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+
+  border: 3px solid #800080;
+  border-collapse: collapse;
+}
+
+/* border */
+thead,
+tfoot {
+  border: 3px solid #800080;
+}
+
+tr:nth-child(1) > th {
+  border: 3px solid #800080;
+}
+
+tr:nth-child(1) > .right {
+  border: 3px solid #800080;
+}
+
+/* text align */
+
+table {
+  text-align: center;
+}
+
+tr:nth-last-child(1) > .right {
+  text-align: right;
+}
+
+tr:nth-last-child(1) > .left {
+  text-align: left;
+}
+
+/* background colors */
+tbody > tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+tbody > tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+/* table heade and table footer --> font color +  background lepoard + linear gradient*/
+thead,
+tfoot {
+  color: white;
+  background-image: url("./assets/leopardskin.jpg");
+}
+
+thead > tr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+tfoot > tr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+tbody > tr {
+  background-image: url("./assets/noise.png");
+}
+
+/* padding for each cell */
+th {
+  padding: 25px 20px;
+}
+
+td {
+  padding: 20px 15px;
+}
